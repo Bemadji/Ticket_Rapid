@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -30,8 +31,7 @@ class MyHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         elevation: 10.0,
         child: const Icon(Icons.add),
-        onPressed: (){
-        },
+        onPressed: () {},
       ),
       body: const Center(
         child: Text(
@@ -43,23 +43,15 @@ class MyHomePage extends StatelessWidget {
           currentIndex: 0,
           fixedColor: Colors.blue,
           items: const [
-            BottomNavigationBarItem(
-                label: "Accueil",
-                icon: Icon(Icons.home)
-            ),
+            BottomNavigationBarItem(label: "Accueil", icon: Icon(Icons.home)),
             BottomNavigationBarItem(
               label: "Recherche",
               icon: Icon(Icons.search),
             ),
             BottomNavigationBarItem(
-                label: "Profile",
-                icon: Icon(Icons.account_circle)
-            ),
+                label: "Profile", icon: Icon(Icons.account_circle)),
           ],
-          onTap: (int indexOfItem) {
-
-          }
-      ),
+          onTap: (int indexOfItem) {}),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -77,7 +69,13 @@ class MyHomePage extends StatelessWidget {
                 accountEmail: Text("mhdjeg@gmail.com"),
                 currentAccountPictureSize: Size.square(50),
                 currentAccountPicture: CircleAvatar(
-                  backgroundColor: Color.fromARGB(255, 23, 89, 187), child: Text("A", style: TextStyle(fontSize: 30, color: Colors.white,),
+                  backgroundColor: Color.fromARGB(255, 23, 89, 187),
+                  child: Text(
+                    "A",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -103,7 +101,6 @@ class MyHomePage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-
             ListTile(
               leading: Icon(Icons.edit),
               title: const Text(' Edit Profile '),
